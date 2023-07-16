@@ -1,7 +1,28 @@
+const { dialog } = window.electron;
+
 exports.browseFile = function() {
-    // TODO: Implement a function to open a file dialog and return the selected file
+    return dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+            { name: 'Images', extensions: ['jpg', 'png', 'gif'] }
+        ]
+    }).then(result => {
+        if (!result.canceled) {
+            return result.filePaths[0];
+        }
+    }).catch(err => {
+        console.log(err);
+    });
 }
 
 exports.browseDirectory = function() {
-    // TODO: Implement a function to open a directory dialog and return the selected directory
+    return dialog.showOpenDialog({
+        properties: ['openDirectory']
+    }).then(result => {
+        if (!result.canceled) {
+            return result.filePaths[0];
+        }
+    }).catch(err => {
+        console.log(err);
+    });
 }
