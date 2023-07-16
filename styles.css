@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #7b6262;
+}
+
+h1 {
+    color: #6ccf63;
+}
+
+#form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+input, select {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #547394;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #375678;
+}
+
+#progressBar {
+    margin-bottom: 20px;
+}

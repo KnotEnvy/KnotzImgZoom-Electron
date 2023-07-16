@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Zoom-Out Video Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Image Zoom-Out Video Generator</h1>
+
+    <div id="form">
+        <label for="imageFile">Image File:</label>
+        <input type="file" id="imageFile" name="imageFile"><br>
+
+        <label for="videoDuration">Video Duration (sec):</label>
+        <input type="number" id="videoDuration" name="videoDuration"><br>
+
+        <label for="fps">Frames per Second:</label>
+        <input type="number" id="fps" name="fps"><br>
+
+        <label for="outputDir">Output Directory:</label>
+        <input type="file" id="outputDir" name="outputDir" webkitdirectory directory><br>
+
+        <label for="startPosition">Start Position:</label>
+        <select id="startPosition" name="startPosition">
+            <option value="topLeft">Top Left</option>
+            <option value="topRight">Top Right</option>
+            <option value="bottomLeft">Bottom Left</option>
+            <option value="bottomRight">Bottom Right</option>
+            <option value="centerTop">Center Top</option>
+            <option value="centerBottom">Center Bottom</option>
+            <option value="center">Center</option>
+        </select><br>
+
+        <button id="generateBtn">Generate Video</button>
+    </div>
+
+    <div id="progressBar" style="display: none;">
+        <label for="progress">Progress:</label>
+        <progress id="progress" value="0" max="100"></progress>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
