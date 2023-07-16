@@ -1,4 +1,5 @@
-const { dialog } = require('electron').remote;
+const { dialog } = window.electron; // Change this line
+
 const path = require('path');
 const imageProcessor = require('./imageProcessor');
 

@@ -1,8 +1,4 @@
-const { contextBridge, remote } = require('electron')
-
-contextBridge.exposeInMainWorld(
-  'electron',
-  {
-    dialog: remote.dialog
-  }
-)
+const { dialog } = require('@electron/remote');
+window.electron = {
+    dialog
+};
